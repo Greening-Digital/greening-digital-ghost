@@ -13,3 +13,17 @@ https://ghost.org/docs/api/v3/handlebars-themes/helpers/get/
 We're using TailwindCSS, which relies on functional css. This lets us use PurgeCSS to clear out most of the unused CSS, and end up with relatively small payloads sent over the wire.
 
 https://tailwindcss.com/docs/controlling-file-size/
+
+### Todo
+
+- [ ] set up basic css pipeline
+- [ ] document how to set up css pipeline for future self / others
+- [ ] adapt to use local css not huge CDN versions
+- [ ] workout how to make production size assets
+- [ ] find assets
+  - [ ] logos
+  - [ ] platform, packet process icons
+  - [ ] bio pics
+- [ ] add `#get` query for pages on home page
+- [ ] add `#get` query for blog posts on home page
+- [ ] actual footers
