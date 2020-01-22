@@ -1,6 +1,6 @@
 {
   "name": "greening-digital",
-  "description": "The theme or the greening digital website",
+  "description": "The theme for the greening digital website",
   "version": "0.5.0",
   "engines": {
     "ghost-api": "v3"
@@ -17,12 +17,16 @@
     "ghost-theme"
   ],
   "dependencies": {
-    "gulp-postcss": "^8.0.0",
+    "gulp-purgecss": "^2.0.5",
     "gulp-sourcemaps": "^2.6.5",
     "tailwindcss": "^1.1.4"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.3.0",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
+    "sugarss": "^2.0.0"
   }
 }

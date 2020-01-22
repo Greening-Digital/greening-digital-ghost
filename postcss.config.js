@@ -13,6 +13,9 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
 })
 
 module.exports = {
+  parser: 'sugarss',
+
+
   plugins: [
     require('tailwindcss'),
     require('autoprefixer'),
