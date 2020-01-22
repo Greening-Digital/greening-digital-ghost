@@ -20,12 +20,19 @@ function css(cb) {
     // run through postcss (see postcss.config.js)
     .pipe(postcss())
     //  output it here
-    .pipe(dest('build/css'))
+    .pipe(dest('assets/build/css'))
 }
 
-exports.default = function () {
 
+function dev() {
   // watch for any handlebars file being updated, and revisit the css needed
   watch('**/**.hbs', css);
+}
 
+
+exports.dev = dev
+
+exports.default = function (cb) {
+  console.log('default task. We might want to serve in dev, or make production builds.')
+  cb()
 }
