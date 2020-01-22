@@ -1,6 +1,7 @@
 
 const { watch, src, series, dest } = require('gulp');
 const postcss = require('gulp-postcss');
+const browserSync = require('browser-sync')
 
 function clean(cb) {
   // body omitted, we'd add bits to clean the
@@ -26,6 +27,13 @@ function css(cb) {
 
 function dev() {
   // watch for any handlebars file being updated, and revisit the css needed
+
+  const bsync = browserSync.create();
+  bsync.init({
+    proxy: 'http://localhost:2368',
+    files: './'
+  });
+
   watch('**/**.hbs', css);
 }
 
