@@ -14,15 +14,44 @@ We're using TailwindCSS, which relies on loads of utility classes to avoid us ne
 
 https://tailwindcss.com/docs/controlling-file-size/
 
+### Working with local emails
+
+You can use Mailhog to test sending emails, without needing to connect to the internet, if you're on a train for example.
+or you're working on templates, and don't want to cruft up your inbox:
+
+First install Mailhog, then add this to `config.development.json`, to replace this:
+
+```json
+"mail": {
+    "transport": "Direct"
+  }
+```
+
+With this:
+
+```json
+"mail": {
+    "transport": "SMTP",
+    "options": {
+      "host": "0.0.0.0",
+      "port": 1025
+    }
+  },
+```
+
+You can see more in [this post on Ghost's forums][mailhog-post] explaining set up in more detail
+
+[mailhog-post]: https://forum.ghost.org/t/using-ghost-with-mailhog-for-local-newsletter-testing/11558
+
 ### Todo
 
-- [ ] set up basic css pipeline
+- [x] set up basic css pipeline
 - [ ] document how to set up css pipeline for future self / others
-- [ ] adapt to use local css not huge CDN versions
-- [ ] workout how to make production size assets
+- [x] adapt to use local css not huge CDN versions
+- [x] workout how to make production size assets
 - [ ] find assets
-  - [ ] logos
-  - [ ] platform, packet process icons
+  - [x] logos
+  - [x] platform, packet process icons
   - [ ] bio pics
 - [ ] add `#get` query for pages on home page
 - [ ] add `#get` query for blog posts on home page
@@ -36,3 +65,24 @@ This invocation took an 883k uncompressed file, and generated one that was 17k u
 ```
 purgecss --css build/styles.css --content ./\*_/_.hbs --out build/purged/
 ```
+
+### Credits
+
+Icons
+
+https://www.flaticon.com/family/special/lineal
+https://www.flaticon.com/packs/future-technology-15
+
+https://thenounproject.com/search/?q=network&i=409821
+https://thenounproject.com/search/?q=network&i=420645
+https://thenounproject.com/term/network/50035/
+
+is this a better network icon than we have now?
+https://thenounproject.com/term/network/50035/
+
+Titillium web
+
+greens
+
+AADE87
+447821
