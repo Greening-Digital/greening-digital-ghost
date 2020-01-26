@@ -15,15 +15,22 @@ function javascript(cb) {
   // gulp here
 }
 
+function fonts(cb) {
+  // take fonts and move prep for serving from build directory
+  return src('assets/fonts/*')
+    //  output it here
+    .pipe(dest('assets/build/fonts'))
+}
+
 function css(cb) {
-  // look through the full css we have
+  // look through the css provided by tailwind and run it through
+  // postcss to give us all the utility classes
   return src('assets/css/*')
     // run through postcss (see postcss.config.js)
     .pipe(postcss())
     //  output it here
     .pipe(dest('assets/build/css'))
 }
-
 
 function dev() {
   // watch for any handlebars file being updated, and revisit the css needed
@@ -34,11 +41,12 @@ function dev() {
     files: './'
   });
 
-  watch('**/**.hbs', css);
+  watch('**/**.hbs', series(fonts, css));
 }
 
-
 exports.dev = dev
+exports.fonts = fonts
+exports.css = css
 
 exports.default = function (cb) {
   console.log('default task. We might want to serve in dev, or make production builds.')

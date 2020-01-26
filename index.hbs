@@ -2,42 +2,134 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-
-<nav class="site-nav">
-
-  <div class="site-nav-primary">
-    {{#if @site.logo}}
-    <a class="site-nav-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
-    {{else}}
-    <a class="site-nav-logo" href="{{@site.url}}">{{@site.title}}</a>
-    {{/if}}
-
-    <div class="site-nav-content">
-      {{#if @site.navigation}}
-      {{navigation}}
-      {{/if}}
-    </div>
-    <div class="site-nav-right">
-      {{#if @site.secondary_navigation}}
-      {{navigation type="secondary"}}
-      {{/if}}
-    </div>
-</nav>
-
 {{!-- The main content area --}}
-<main id="site-main" class="site-main outer">
-  <div class="inner posts">
 
-    <div class="post-feed">
-      {{#get "pages" as |pages pagination|}}
-      {{#foreach pages }}
-
-      {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-      {{ title }}
-
-      {{/foreach}}
-      {{/get}}
+<div class="bg-brand-green-lighter">
+  <div class="container max-w-5xl mx-auto flex flex-wrap flex-col md:flex-row items-center ">
+    <!--Left Col-->
+    <div class="flex flex-col w-full md:w-4/5 justify-center items-start md:text-left">
+      <h1 class="my-4 text-5xl font-display leading-tight ">
+        Planet digital friendly services
+      </h1>
+      <p class="leading-normal text-2xl mb-8 text-gray-600 ">
+        We help you understand the environmental impact of digital services, and
+        how to make them faster, greener, and smarter. Burn less cash, and emit
+        less carbon.
+      </p>
+      <button
+        class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">
+        See how
+      </button>
     </div>
-
   </div>
+</div>
+{{!-- what we offer and how we help --}}
+<main id="site-main" class="site-main outer">
+  <section class="bg-white border-b py-8">
+    <div class="container max-w-5xl mx-auto m-8">
+      <h2 class="w-full my-2 text-3 xl font-bold leading-tight text-gray-800">
+        How we help you build greener digital products
+      </h2>
+
+      <h3></h3>
+
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+
+      <div class="flex flex-wrap">
+        <div class="w-5/6 sm:w-1/2 p-6">
+          <h3 class="text-3xl text-gray-800 font-bold font-display leading-none mb-3">
+            Platform
+          </h3>
+          <p class="text-gray-600 mb-8">
+            For infrastructure you run, we offer architectural consulting and
+            performance engineering.<br /><br />
+          </p>
+        </div>
+
+        <div class="w-full sm:w-1/2 p-6">
+          <img class="sm:h-32 mx-auto" src="{{asset "assets/img/svg/platform.svg"
+
+
+          }}" alt="">
+        </div>
+      </div>
+
+      <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+        <div class="w-full sm:w-1/2 p-6 mt-6">
+          <img class="sm:h-32 mx-auto" src="{{asset "assets/img/svg/packets.svg"
+
+
+          }}" alt="" />
+        </div>
+        <div class="w-full sm:w-1/2 p-6 mt-6">
+          <div class="align-middle">
+            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+              Packets
+            </h3>
+            <p class="text-gray-600 mb-8">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              at ipsum eu nunc commodo posuere et sit amet ligula.<br /><br />
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap">
+          <div class="w-5/6 sm:w-1/2 p-6">
+            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+              Process
+            </h3>
+            <p class="text-gray-600 mb-8">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              at ipsum eu nunc commodo posuere et sit amet ligula. Learn more
+              about hel:
+              <a class="text-green-500 underline" href="https://undraw.co/">undraw.co</a>
+            </p>
+          </div>
+          <div class="w-full sm:w-1/2 p-6">
+            <img class="w-full sm:h-32 mx-auto" src="{{asset "assets/img/svg/process.svg"
+
+
+            }}" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{!-- who we are --}}
+  <section class="bg-grey-800 border-b py-8">
+    <div class="container max-w-5xl mx-auto m-8">
+      <div class="">
+        {{#get "pages" as |pages pagination|}}
+        {{#foreach pages }}
+
+        {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+        {{ title }}
+
+        {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+  </section>
+
+  {{!-- who we have worked with --}}
+
+  <section class="bg-grey-800 border-b py-8">
+    <div class="container max-w-5xl mx-auto m-8">
+
+      <img src="" </div> </section> {{!-- latest news - 2 posts and one newsletter --}} <section
+        class="bg-grey-800 border-b py-8">
+      <div class="container max-w-5xl mx-auto m-8">
+        <div class="news">
+          {{#foreach posts }}
+
+          {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+          {{ title }}
+
+          {{/foreach}}
+        </div>
+      </div>
+  </section>
+
 </main>

@@ -49,7 +49,7 @@ You can see more in [this post on Ghost's forums][mailhog-post] explaining set u
 - [ ] document how to set up css pipeline for future self / others
 - [x] adapt to use local css not huge CDN versions
 - [x] workout how to make production size assets
-- [ ] find assets
+- [x] find assets
   - [x] logos
   - [x] platform, packet process icons
   - [ ] bio pics
@@ -73,12 +73,22 @@ Icons
 https://www.flaticon.com/family/special/lineal
 https://www.flaticon.com/packs/future-technology-15
 
+Platform
+https://www.flaticon.com/free-icon/chip_897219
+
+Packets
 https://thenounproject.com/search/?q=network&i=409821
 https://thenounproject.com/search/?q=network&i=420645
 https://thenounproject.com/term/network/50035/
 
 is this a better network icon than we have now?
 https://thenounproject.com/term/network/50035/
+
+Process
+https://thenounproject.com/search/?q=network&i=409821
+
+Process:
+https://www.flaticon.com/free-icon/strategy_993782
 
 Titillium web
 

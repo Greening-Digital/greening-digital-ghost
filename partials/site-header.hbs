@@ -1,0 +1,64 @@
+<header class="max-w-5xl mx-auto py-6 flex items-center justify-between flex-wrap">
+
+  <div class="flex items-center justify-between w-full lg:w-auto">
+    <div class="flex text-white">
+      {{#if @site.logo}}
+      <a class="" href="{{@site.url}}">
+        <img class="h-6" src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+      {{else}}
+      <a class="site-nav-logo" href="{{@site.url}}">{{@site.title}}</a>
+      {{/if}}
+    </div>
+
+    <div class="block flex lg:hidden">
+      <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </button>
+    </div>
+
+  </div>
+
+  <nav class="flex items-center justify-between flex-wrap p-0">
+    {{navigation}}
+  </nav>
+</header>
+
+{{!-- TODO: move this into a script file instead. It's a bit messy here --}}
+
+<script>
+  /*Toggle dropdown list*/
+  /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+  var navMenuDiv = document.getElementById("nav-content");
+  var navMenu = document.getElementById("nav-toggle");
+
+  document.onclick = check;
+  function check(e) {
+    var target = (e && e.target) || (event && event.srcElement);
+
+    //Nav Menu
+    if (!checkParent(target, navMenuDiv)) {
+      // click NOT on the menu
+      if (checkParent(target, navMenu)) {
+        // click on the link
+        if (navMenuDiv.classList.contains("hidden")) {
+          navMenuDiv.classList.remove("hidden");
+        } else { navMenuDiv.classList.add("hidden"); }
+      } else {
+        // click both outside link and outside menu, hide menu
+        navMenuDiv.classList.add("hidden");
+      }
+    }
+
+  }
+  function checkParent(t, elm) {
+    while (t.parentNode) {
+      if (t == elm) { return true; }
+      t = t.parentNode;
+    }
+    return false;
+  }
+</script>
