@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to Greening Digital
+      uses: appleboy/ssh-action@master
+      with:
+        username: grngdgtl
+        host: greening.digital
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          cd ~/ghost/content/themes/
+          git clone git@github.com:Greening-Digital/greening-digital-ghost.git
+          npm install
+          npm run build
+          supervisorctl restart ghost
