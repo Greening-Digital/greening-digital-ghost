@@ -66,6 +66,14 @@ This invocation took an 883k uncompressed file, and generated one that was 17k u
 purgecss --css build/styles.css --content ./\*_/_.hbs --out build/purged/
 ```
 
+### Deploying
+
+To push the update theme to the live site, push to the `production` branch.
+
+A github action will deploy it to the relevant server.
+
+It helps it you shout "YOLO" whilst doing so, as it improves the chances of build step working.
+
 ### Credits
 
 Icons
