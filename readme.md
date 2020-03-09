@@ -52,10 +52,14 @@ You can see more in [this post on Ghost's forums][mailhog-post] explaining set u
 - [x] find assets
   - [x] logos
   - [x] platform, packet process icons
-  - [ ] bio pics
+  - [x] bio pics
 - [ ] add `#get` query for pages on home page
 - [ ] add `#get` query for blog posts on home page
-- [ ] actual footers
+- [x] actual footers
+
+### Deploying changes
+
+Push to the `production` branch. A github action will deploy it to the relevant server.
 
 ### Notes
 
