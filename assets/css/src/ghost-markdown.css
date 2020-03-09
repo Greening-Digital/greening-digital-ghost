@@ -1,0 +1,15 @@
+/* purgecss start ignore */
+
+
+article {
+  @apply text-gray-900 text-lg;
+}
+
+article h1, article h2 {
+  @apply text-2xl my-6 ;
+}
+
+article a {
+  @apply underline text-brand-green-darker;
+}
+/* purgecss end ignore */

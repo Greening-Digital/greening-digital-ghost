@@ -42,6 +42,7 @@ function dev() {
   });
 
   watch('**/**.hbs', series(fonts, css));
+  watch('assets/css/**/**.css', series(fonts, css));
 }
 
 exports.dev = dev

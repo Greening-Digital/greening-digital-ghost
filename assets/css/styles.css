@@ -1,11 +1,8 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 
-/* purgecss start ignore */
-/* @tailwind base; */
-/* @tailwind components; */
+@import "./src/ghost-specific.css";
+@import "./src/ghost-markdown.css";
 
-/* purgecss end ignore */
 @import "tailwindcss/utilities";
-/* @tailwind utilities; */
-@import "./ghost-specific.css";
+

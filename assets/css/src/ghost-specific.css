@@ -1,5 +1,6 @@
-/* You need these in the final generated file, otherwise
- * ghost complains about the theme
+/*
+You need these in the final generated file, otherwise
+ghost complains about the theme
 */
 
 /* purgecss start ignore */
@@ -28,3 +29,5 @@
   src: url("../fonts/titillium-web-latin-400.woff2") format("woff2"),
     url("../fonts/titillium-web-latin-400.woff") format("woff");
 }
+
+
