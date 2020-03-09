@@ -11,6 +11,8 @@ jobs:
     steps:
     - name: Deploy to Greening Digital
       uses: appleboy/ssh-action@master
+      env:
+        NODE_ENV: production
       with:
         username: grngdgtl
         host: greening.digital
