@@ -42,8 +42,8 @@ into the {body} of the default.hbs template --}}
 
     {{!-- platform --}}
     <div class="flex flex-wrap">
-      <div class="flex">
-        <img class="flex-initial w-40 h-40 pr-4" src="./assets/img/ppp/platform.svg">
+      <div class="flex lg:flex-row flex-col">
+        <img class="flex-initial lg:w-40 lg:h-40 lg:pr-4" src="./assets/img/ppp/platform.svg">
         <div class="flex-initial max-w-3xl">
           <h3 class="text-3xl text-gray-800 font-bold font-display leading-none mb-3">
             Platform
@@ -65,8 +65,8 @@ into the {body} of the default.hbs template --}}
     </div>
     {{!-- packets --}}
     <div class="w-full mt-6">
-      <div class="flex ">
-        <img class="flex-initial w-40 h-40 pr-4" src="./assets/img/ppp/packets.svg">
+      <div class="flex lg:flex-row flex-col">
+        <img class="flex-initial lg:w-40 lg:h-40 lg:pr-4" src="./assets/img/ppp/packets.svg">
         <div class="flex-intial max-w-3xl">
           <h3 class="text-3xl text-gray-800 font-bold font-display  leading-none mb-3">
             Packets
@@ -88,8 +88,8 @@ into the {body} of the default.hbs template --}}
     {{!-- process --}}
     <div class="flex flex-wrap">
       <div class="mt-6">
-        <div class="flex">
-          <img class="flex-initial w-40 h-40 pr-4" src="./assets/img/ppp/process.svg">
+        <div class="flex lg:flex-row flex-col">
+          <img class="flex-initial lg:w-40 lg:h-40 lg:pr-4" src="./assets/img/ppp/process.svg">
           <div class="flex-initial max-w-3xl">
             <h3 class="text-3xl text-gray-800 font-bold font-display leading-none mb-3">
               Process
@@ -105,7 +105,6 @@ into the {body} of the default.hbs template --}}
               greener
               and
               smarter.</p>
-
             </p>
 
 
@@ -125,7 +124,7 @@ into the {body} of the default.hbs template --}}
 
     <h3 class="text-3xl font-display mb-4">Who we are</h3>
 
-    <div class="flex sm:flex-wrap">
+    <div class="flex flex-col lg:flex-row">
       <div class="mt-4 px-2 flex-1">
         {{!-- pic --}}
         <img class="rounded-full object-cover object-center text-center mx-auto"
@@ -166,7 +165,7 @@ into the {body} of the default.hbs template --}}
     <h3 class="text-3xl font-display border-gray-800 mb-4">Who we've worked with</h3>
 
 
-    <div class="flex items-center">
+    <div class="flex items-center flex-col lg:flex-row">
       <div class="flex-1 align-middle mx-4 px-4 flex-wrap">
         <img src="./assets/img/logos/climateKIC.png" />
       </div>
@@ -177,7 +176,7 @@ into the {body} of the default.hbs template --}}
         <img src="./assets/img/logos/spendnetwork.png" />
       </div>
     </div>
-    <div class="flex items-center">
+    <div class="flex items-center flex-col lg:flex-row">
       <div class="flex-1 align-middle mx-4 px-4 flex-wrap">
         <img src="./assets/img/logos/mapcamp.png" />
       </div>
