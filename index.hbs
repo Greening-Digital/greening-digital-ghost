@@ -4,132 +4,188 @@ into the {body} of the default.hbs template --}}
 
 {{!-- The main content area --}}
 
-<div class="bg-brand-green-lighter">
-  <div class="container max-w-5xl mx-auto flex flex-wrap flex-col md:flex-row items-center ">
+<div class="bg-brand-green-lighter px-4">
+  <div class="container max-w-5xl mx-auto flex flex-wrap flex-col md:flex-row items-center pt-8">
     <!--Left Col-->
     <div class="flex flex-col w-full md:w-4/5 justify-center items-start md:text-left">
       <h1 class="my-4 text-5xl font-display leading-tight ">
-        Planet digital friendly services
+        Sustainability for digital teams
       </h1>
-      <p class="leading-normal text-2xl mb-8 text-gray-600 ">
+      <p class="leading-normal text-2xl mb-4 text-gray-600 font-display">
         We help you understand the environmental impact of digital services, and
-        how to make them faster, greener, and smarter. Burn less cash, and emit
-        less carbon.
+        how to make them faster, greener, and smarter.
       </p>
-      <button
-        class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">
-        See how
-      </button>
+      <div class="flex flex-row">
+        <button
+          class="mx-auto lg:ml-0 lg:mr-4 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg mr-4">
+          See how
+        </button>
+        <button
+          class="mx-auto lg:ml-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg, mr-4">
+          Get in touch
+        </button>
+      </div>
     </div>
   </div>
 </div>
 {{!-- what we offer and how we help --}}
-<main id="site-main" class="site-main outer">
-  <section class="bg-white border-b py-8">
-    <div class="container max-w-5xl mx-auto m-8">
-      <h2 class="w-full my-2 text-3 xl font-bold leading-tight text-gray-800">
+<section class="bg-white border-b py-4 px-4 text-gray-600">
+  <div class="container max-w-5xl mx-auto">
+    <div class="py-4 lg:w-2/3 mx-auto mb-10">
+      <h2 class="w-full text-3xl font-display font-bold leading-tight text-gray-800 pb-4">
         How we help you build greener digital products
       </h2>
 
-      <h3></h3>
+      <h3>Knowing where to start can be hard, if you want to make digital products more sustainable. We use a framework
+        we call <em></em>Platform, Packets and Process</em> to help work how to begin your journey.</h3>
+    </div>
 
-      <div class="w-full mb-4">
-        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-      </div>
-
-      <div class="flex flex-wrap">
-        <div class="w-5/6 sm:w-1/2 p-6">
+    {{!-- platform --}}
+    <div class="flex flex-wrap">
+      <div class="flex">
+        <img class="flex-initial w-40 h-40 pr-4" src="./assets/img/ppp/platform.svg">
+        <div class="flex-initial max-w-3xl">
           <h3 class="text-3xl text-gray-800 font-bold font-display leading-none mb-3">
             Platform
           </h3>
-          <p class="text-gray-600 mb-8">
-            For infrastructure you run, we offer architectural consulting and
-            performance engineering.<br /><br />
+          <p>
+            For infrastructure you run, we offer architectural consulting to help you green your stack, and performance
+            engineering to help make the most of the compute power you do pay for.
           </p>
-        </div>
-
-        <div class="w-full sm:w-1/2 p-6">
-          <img class="sm:h-32 mx-auto" src="{{asset "assets/img/svg/platform.svg"
-
-
-          }}" alt="">
+          <p class="pt-2">
+            You burn less cash, and emit
+            less carbon.
+          </p>
+          <p><a href="#" class="text-brand-green-darker text-xl">Learn more</a></p>
         </div>
       </div>
+    </div>
 
-      <div class="flex flex-wrap flex-col-reverse sm:flex-row">
-        <div class="w-full sm:w-1/2 p-6 mt-6">
-          <img class="sm:h-32 mx-auto" src="{{asset "assets/img/svg/packets.svg"
+    <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+    </div>
+    {{!-- packets --}}
+    <div class="w-full mt-6">
+      <div class="flex ">
+        <img class="flex-initial w-40 h-40 pr-4" src="./assets/img/ppp/packets.svg">
+        <div class="flex-intial max-w-3xl">
+          <h3 class="text-3xl text-gray-800 font-bold font-display  leading-none mb-3">
+            Packets
+          </h3>
+          <p>
+            Everything you send over the internet is sent as packets of data, and it all has a carbon footprint.</p>
+          <p>Here we help you audit your products, set up budgets for carbon and performance, then help you manage it
+            with continuous monitoring.
+          </p>
 
-
-          }}" alt="" />
+          <p class="pt-2">You get sites and apps that are faster, more usable, and result in measurably lower carbon
+            emissions.
+          </p>
+          <p><a href="#" class="text-brand-green-darker text-xl">Learn more</a></p>
         </div>
-        <div class="w-full sm:w-1/2 p-6 mt-6">
-          <div class="align-middle">
-            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-              Packets
-            </h3>
-            <p class="text-gray-600 mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              at ipsum eu nunc commodo posuere et sit amet ligula.<br /><br />
-            </p>
-          </div>
-        </div>
+      </div>
+    </div>
 
-        <div class="flex flex-wrap">
-          <div class="w-5/6 sm:w-1/2 p-6">
-            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+    {{!-- process --}}
+    <div class="flex flex-wrap">
+      <div class="mt-6">
+        <div class="flex">
+          <img class="flex-initial w-40 h-40 pr-4" src="./assets/img/ppp/process.svg">
+          <div class="flex-initial max-w-3xl">
+            <h3 class="text-3xl text-gray-800 font-bold font-display leading-none mb-3">
               Process
             </h3>
-            <p class="text-gray-600 mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              at ipsum eu nunc commodo posuere et sit amet ligula. Learn more
-              about hel:
-              <a class="text-green-500 underline" href="https://undraw.co/">undraw.co</a>
+            <p>
+              Finally, how and where you work, and product decisions you make over its lifetime have environmental
+              impacts, and affects how you can attract or retain talent. Here, we help your whole team view their work
+              through a lens
+              of sustainability, with workshops and strategic briefings.</p>
+            <p class="pt-2">
+              You learn to uncover risks and new
+              opportunities early. You also see where the biggest levers for impact are in your team, to start working
+              greener
+              and
+              smarter.</p>
+
             </p>
-          </div>
-          <div class="w-full sm:w-1/2 p-6">
-            <img class="w-full sm:h-32 mx-auto" src="{{asset "assets/img/svg/process.svg"
 
 
-            }}" alt="" />
+            <p><a href="#" class="text-brand-green-darker text-xl">Learn more</a></p>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  {{!-- who we are --}}
-  <section class="bg-grey-800 border-b py-8">
-    <div class="container max-w-5xl mx-auto m-8">
-      <div class="">
-        {{#get "pages" as |pages pagination|}}
-        {{#foreach pages }}
 
-        {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-        {{ title }}
+  </div>
+  </div>
+  </div>
+</section>
+{{!-- who we are --}}
+<section class="bg-brand-green-lighter border-b py-2 px-4 ">
+  <div class="container max-w-5xl mx-auto">
 
-        {{/foreach}}
-        {{/get}}
-      </div>
-    </div>
-  </section>
+    <h3 class="text-3xl font-display mb-4">Who we are</h3>
 
-  {{!-- who we have worked with --}}
-
-  <section class="bg-grey-800 border-b py-8">
-    <div class="container max-w-5xl mx-auto m-8">
-
-      <img src="" </div> </section> {{!-- latest news - 2 posts and one newsletter --}} <section
-        class="bg-grey-800 border-b py-8">
-      <div class="container max-w-5xl mx-auto m-8">
-        <div class="news">
-          {{#foreach posts }}
-
-          {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-          {{ title }}
-
-          {{/foreach}}
+    <div class="flex sm:flex-wrap">
+      <div class="mt-4 px-2 flex-1">
+        {{!-- pic --}}
+        <img class="rounded-full object-cover object-center text-center mx-auto"
+          src="./assets/img/photo/chris@0,25x.jpg" alt="" />
+        <div class="m-4 p-2 max-w-xs mx-auto text-center">
+          <h3 class="font-display text-2xl">Chris Adams</h3>
+          <p class="text-brand-green-darker">Github | LinkedIn | Twitter </p>
         </div>
       </div>
-  </section>
 
-</main>
+      <div class="mt-4 px-2 flex-1">
+        {{!-- pic --}}
+        <img class="rounded-full object-cover object-center text-center mx-auto"
+          src="./assets/img/photo/martin@0,25x.jpg" alt="" />
+        <div class="m-4 p-2 max-w-xs mx-auto text-center">
+          <h3 class="font-display text-2xl">Martin Meyerhoff</h3>
+          <p class="text-brand-green-darker">Github | LinkedIn | Twitter </p>
+        </div>
+      </div>
+
+      <div class="mt-4 px-2 flex-1">
+        {{!-- pic --}}
+        <img class="rounded-full object-cover object-center text-center mx-auto" src="./assets/img/photo/ryan@0,25x.jpg"
+          alt="" />
+        <div class="m-4 p-2 max-w-xs mx-auto text-center">
+          <h3 class="font-display text-2xl">Ryan Parr</h3>
+          <p class="text-brand-green-darker">Github | LinkedIn | Twitter </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+{{!-- who we have worked with --}}
+<section class="border-b py-2 px-4 ">
+  <div class="container max-w-5xl mx-auto">
+    <h3 class="text-3xl font-display border-gray-800 mb-4">Who we've worked with</h3>
+
+
+    <div class="flex items-center">
+      <div class="flex-1 align-middle mx-4 px-4 flex-wrap">
+        <img src="./assets/img/logos/climateKIC.png" />
+      </div>
+      <div class="flex-1 max-w-xs align-middle px-4 mx-4">
+        <img src="./assets/img/logos/mozilla.png" />
+      </div>
+      <div class="flex-1 max-w-xs align-middle px-4 mx-4">
+        <img src="./assets/img/logos/spendnetwork.png" />
+      </div>
+    </div>
+    <div class="flex items-center">
+      <div class="flex-1 align-middle mx-4 px-4 flex-wrap">
+        <img src="./assets/img/logos/mapcamp.png" />
+      </div>
+      <div class="flex-1 max-w-xs align-middle px-4 mx-4">
+        <img src="./assets/img/logos/edge-ryders.png" />
+      </div>
+      <div class="flex-1 max-w-xs align-middle px-4 mx-4">
+        <img src="./assets/img/logos/the-panoply.png" />
+      </div>
+    </div>
+</section>
