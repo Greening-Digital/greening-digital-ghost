@@ -17,8 +17,7 @@
     "ghost-theme"
   ],
   "dependencies": {
-    "postcss-import": "^12.0.1",
-    "tailwindcss": "^1.1.4",
+    "tailwindcss": "^1.2.0",
     "typeface-open-sans": "0.0.75",
     "typeface-titillium-web": "0.0.72"
   },
@@ -27,7 +26,10 @@
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
-    "gulp-sourcemaps": "^2.6.5"
+    "gulp-sourcemaps": "^2.6.5",
+    "postcss": "^7.0.26",
+    "postcss-cli": "^7.1.0",
+    "postcss-import": "^12.0.1"
   },
   "scripts": {
     "build": "gulp css",
