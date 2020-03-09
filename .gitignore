@@ -1,3 +1,6 @@
 node_modules
 .DS_Store
 build
+
+# don't track stuff in cruft
+cruft
