@@ -2,14 +2,30 @@
 
 
 article {
-  @apply text-gray-900 text-lg;
+  @apply text-gray-900 text-lg max-w-3xl;
 }
 
-article h1, article h2 {
-  @apply text-2xl my-6 ;
+article p {
+  @apply pt-2;
+}
+
+article h1, article h2{
+  @apply text-2xl my-4 font-bold ;
+}
+
+article h3 {
+  @apply text-xl font-bold pt-3;
 }
 
 article a {
   @apply underline text-brand-green-darker;
+}
+
+article li {
+  @apply mt-2 list-disc ml-6;
+}
+
+article hr {
+  @apply mt-4 mb-4;
 }
 /* purgecss end ignore */
