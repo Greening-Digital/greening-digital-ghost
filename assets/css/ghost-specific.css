@@ -1,5 +1,7 @@
-// You need these in the final generated file,
-/* ghost complains about the theme */
+/* You need these in the final generated file, otherwise
+ * ghost complains about the theme
+*/
+
 /* purgecss start ignore */
 .kg-width-wide,
 .kg-width-full,
