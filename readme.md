@@ -57,7 +57,7 @@ You can see more in [this post on Ghost's forums][mailhog-post] explaining set u
 - [ ] add `#get` query for blog posts on home page
 - [x] actual footers
 
-### Deploying changes
+### Deploying changes
 
 Push to the `production` branch. A github action will deploy it to the relevant server.
 
@@ -76,7 +76,7 @@ To push the update theme to the live site, push to the `production` branch.
 
 A github action will deploy it to the relevant server.
 
-It helps it you shout "YOLO" whilst doing so, as it improves the chances of build step working.
+We find that it helps if you shout "YOLO" whilst doing so, as it improves the chances of build step working.
 
 ### Credits
 
